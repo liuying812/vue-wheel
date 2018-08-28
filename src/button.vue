@@ -1,5 +1,9 @@
 <template>
-    <button class="v-button">hello</button>
+    <div>
+        <button class="v-button">
+            <slot></slot>
+        </button>
+    </div>
 </template>
 <script>
     export default {}
@@ -11,7 +15,6 @@
         padding: 0 1em;
         border: 1px solid var(--border-color);
         background: var(--button-bg);
-
         &:hover {
             border-color: var(--border-color-hover);
         }
