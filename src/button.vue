@@ -1,7 +1,8 @@
 <template>
-    <button class="v-button" :class="{[`icon-${iconPosition}`]: true}">
-        <v-icon v-if="icon" :name="icon" class="icon"></v-icon>
-        <v-icon name="loading" class="loading"></v-icon>
+    <button class="v-button" :class="{[`icon-${iconPosition}`]: true}"
+    @click="$emit('click')">
+        <v-icon class="icon" v-if="icon && !loading" :name="icon"></v-icon>
+        <v-icon class="loading icon" v-if="loading" name="loading"></v-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -12,6 +13,10 @@
       //  props: ['icon', 'icon-position']
         props:{
             icon:{},
+            loading:{
+                type: Boolean,
+                default: false
+            },
             iconPosition: {
                 type: String ,
                 default: 'left',
@@ -36,7 +41,7 @@
         &:active { background-color: var(--button-active-bg);}
         &:focus { outline: none;}
         >.content{ order:2; }
-        >.icon{ order:1; margin-left:0; margin-right: .4em}
+        >.icon{ order:1;  margin-right: .4em}
         &.icon-right{
             > .content{ order:1;}
             > .icon{ order: 2; margin-left: .4em; margin-right: 0}

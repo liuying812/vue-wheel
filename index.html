@@ -31,13 +31,15 @@
 </head>
 <body>
     <div id="app">
-        <v-button>
+        <v-button :loading="loading1" @click="loading1 = !loading1">
             按钮
         </v-button>
-        <v-button  icon="shezhi">
+        <v-button  icon="shezhi" :loading="loading2"
+                   @click="loading2 = !loading2">
             按钮
         </v-button>
-        <v-button  icon="shezhi" icon-position="right">
+        <v-button  icon="shezhi" icon-position="right" :loading="loading3"
+                   @click="loading3 = !loading3">
             按钮
         </v-button>
 
