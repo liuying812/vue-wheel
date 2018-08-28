@@ -3,7 +3,18 @@
         <slot></slot>
     </div>
 </template>
-<script></script>
+<script>
+    export default {
+        mounted(){
+            for (let node of this.$el.children){
+                let name = node.nodeName.toLocaleLowerCase()
+                if(name !== 'button'){
+                    console.log(`g-button-group 的子元素应该全是 v-button , 但你写的是${name}`)
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .v-button-group{
         display: inline-flex;
