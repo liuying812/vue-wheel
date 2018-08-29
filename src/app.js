@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
+import Input from './input'
 
 Vue.component('v-button', Button)
 Vue.component('v-icon', Icon)
 Vue.component('v-button-group', ButtonGroup)
+Vue.component('v-input', Input)
 
 new Vue({
     el:'#app',
@@ -16,8 +18,12 @@ new Vue({
     }
 })
 
-import chai from 'chai'
 
+
+
+
+/*
+import chai from 'chai'
 const expect = chai.expect
 //单元测试
 {
@@ -97,4 +103,4 @@ const expect = chai.expect
     let button = vm.$el
     button.click()
     expect(spy).to.have.been.called()
-}
+}*/

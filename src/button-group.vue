@@ -15,7 +15,7 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .v-button-group{
         display: inline-flex;
         > .v-button{
