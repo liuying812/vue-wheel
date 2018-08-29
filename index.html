@@ -58,6 +58,27 @@
             <p>{{message}}</p>
             <button @click="message+=1">+1</button>
         </div>
+        
+        <v-row>
+            <v-col>1</v-col>
+            <v-col>2</v-col>
+        </v-row>
+        <v-row>
+            <v-col>1</v-col>
+            <v-col>2</v-col>
+            <v-col>3</v-col>
+        </v-row>
+        <v-row>
+            <v-col>1</v-col>
+            <v-col>2</v-col>
+            <v-col>3</v-col>
+            <v-col>4</v-col>
+        </v-row>
+        <v-row>
+            <v-col :span="2">1</v-col>
+            <v-col :span="22">11</v-col>
+        </v-row>
+
 
     </div>
     <script src="./src/app.js"></script>
