@@ -46,13 +46,17 @@
 
         <div style="margin: 20px 0px">
             <v-input value="disabled" disabled></v-input>
-            <v-input value="哈哈哈"></v-input>
+            <v-input value="Hello"></v-input>
             <v-input value="readonly" readonly></v-input>
-            <v-input value="李" error="不能少于两个字"></v-input>
         </div>
-
         <div style="margin: 20px 0px">
             <v-input value="12"  @change="inputChange"></v-input>
+            <v-input value="你" error="不能少于两个字"></v-input>
+        </div>
+        <div style="margin: 20px 0px;">
+            <v-input v-model="message"></v-input>
+            <p>{{message}}</p>
+            <button @click="message+=1">+1</button>
         </div>
 
     </div>
