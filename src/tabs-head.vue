@@ -23,20 +23,24 @@
 <style lang="scss" scoped>
     $tab-height: 40px;
     $blue: blue;
+    $border-color: #ddd;
     .tabs-head{
         display: flex;
         height: $tab-height;
         justify-content: flex-start;
-        border:1px solid red;
         position: relative;
+        border-bottom: 1px solid $border-color;
         > .line{
             position: absolute;
             bottom:0;
             border-bottom: 3px solid $blue;
-            transition: left .7s, width .7s;
+            transition: left .3s, width .3s;
         }
         >.actions-wrapper{
             margin-left: auto;  //靠右
+            display: flex;
+            align-items: center;
+            padding: 0 2em;
         }
     }
 </style>
