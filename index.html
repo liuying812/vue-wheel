@@ -59,7 +59,7 @@
             <button @click="message+=1">+1</button>
         </div>
         
-        <v-row gutter="20">
+     <!--   <v-row gutter="20">
             <v-col>1</v-col>
             <v-col>2</v-col>
         </v-row>
@@ -81,7 +81,25 @@
          <v-row gutter="20">
                 <v-col :span="2">1</v-col>
                 <v-col :span="22">11</v-col>
-         </v-row>
+         </v-row>-->
+
+        <v-tabs :selected.sync="selectedTab" >
+            <v-tabs-head>
+                <template slot="actions">
+                    <button>设置</button>
+                </template>
+                <v-tabs-item name="fashion">
+                    <v-icon name="shezhi"></v-icon>时尚</v-tabs-item>
+                <v-tabs-item name="finance" disabled>财经</v-tabs-item>
+                <v-tabs-item name="sports">体育</v-tabs-item>
+            </v-tabs-head>
+            <v-tabs-body>
+                <v-tabs-pane name="fashion">时尚时尚资讯</v-tabs-pane>
+                <v-tabs-pane name="finance">财经财经早知道</v-tabs-pane>
+                <v-tabs-pane name="sports">体育竞技内容</v-tabs-pane>
+            </v-tabs-body>
+        </v-tabs>
+
 
     </div>
     <script src="./src/app.js"></script>

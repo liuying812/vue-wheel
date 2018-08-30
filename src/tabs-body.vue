@@ -5,7 +5,11 @@
 </template>
 <script>
     export default {
-        name: 'vue-wheel-tabs-body'
+        name: 'vue-wheel-tabs-body',
+        inject: ['eventBus'],
+        created(){
+
+        }
     }
 </script>
 <style lang="scss" scoped>
