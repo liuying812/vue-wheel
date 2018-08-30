@@ -11,9 +11,11 @@
     export default {
         name: 'vue-wheel-tabs-head',
         inject: ['eventBus'],
-        created(){
+        mounted(){
             this.eventBus.$on('update:selected', (item, vm) =>{
-                console.log(vm);
+               let {width, height, top, left} = vm.$el.getBoundingClientRect()
+                this.$refs.line.style.width = `${width}px`
+                this.$refs.line.style.left = `${left-21}px`  //距左边多了21px 没找到原因
             })
         }
     }
@@ -31,7 +33,7 @@
             position: absolute;
             bottom:0;
             border-bottom: 3px solid $blue;
-            width: 100px;
+            transition: left .7s, width .7s;
         }
         >.actions-wrapper{
             margin-left: auto;  //靠右
