@@ -1,6 +1,6 @@
 # Button
 
-使用方法
+预览
 
 <ClientOnly>
 <button-demo></button-demo>

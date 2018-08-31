@@ -5,6 +5,7 @@
 </template>
 <script>
     import  Vue from 'vue'
+
     export default {
         name: 'vue-wheel-tabs',
         props:{
