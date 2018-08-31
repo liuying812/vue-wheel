@@ -15,6 +15,7 @@
             <v-col>3</v-col>
             <v-col>4</v-col>
         </v-row>
+        <p><strong>代码</strong></p>
         <pre><code>{{content1}}</code></pre>
         <h2><strong>中间有缝隙</strong></h2>
         <div style="margin-top:20px;">
@@ -23,6 +24,7 @@
                 <v-col>2</v-col>
             </v-row>
         </div>
+        <p><strong>代码</strong></p>
         <pre><code>{{content2}}</code></pre>
         <h2><strong>有缝隙 有偏移</strong></h2>
         <div style="margin-top:20px;">
@@ -31,6 +33,7 @@
                 <v-col :span="20" offset="2">11</v-col>
             </v-row>
         </div>
+        <p><strong>代码</strong></p>
         <pre><code>{{content3}}</code></pre>
 
     </div>

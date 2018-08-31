@@ -55,8 +55,10 @@
     }
     .content-wrapper{
         position: absolute;
-        border: 1px solid red;
+        border: 1px solid #000;
+        padding: 8px 16px;
         box-shadow:  0 0 3px rgba(0,0,0,0.5);
         transform : translateY(-100%);  //为了展示在上方
     }
+
 </style>

@@ -16,7 +16,7 @@
                 <v-tabs-pane name="3">Content three</v-tabs-pane>
             </v-tabs-body>
         </v-tabs>
-
+        <p><strong>代码</strong></p>
         <pre><code>{{content}}</code></pre>
 
     </div>

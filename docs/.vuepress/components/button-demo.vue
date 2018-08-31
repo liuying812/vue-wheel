@@ -7,7 +7,7 @@
             按钮
         </v-button>
 
-
+        <p><strong>代码</strong></p>
         <pre><code>{{content}}</code></pre>
 
     </div>
