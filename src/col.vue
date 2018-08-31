@@ -1,7 +1,7 @@
 <template>
     <div class="col" :class="colClass"
          :style="colStyle">
-        <div style="border:1px solid green; height:100px;">
+        <div style="border:1px solid green; height:50px;">
             <slot></slot>
         </div>
     </div>
@@ -39,7 +39,7 @@
 </script>
 <style lang="scss" scoped>
     .col{
-        height: 100px;
+        height: 50px;
        /* background: grey;*/
         width:50%;
        /* border: 1px solid red;*/
