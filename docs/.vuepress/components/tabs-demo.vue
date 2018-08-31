@@ -3,7 +3,7 @@
         <v-tabs :selected.sync="selectedTab" >
             <v-tabs-head>
                 <template slot="actions">
-                    <button>设置</button>
+                    <v-button>setting</v-button>
                 </template>
                 <v-tabs-item name="1">Tab 1</v-tabs-item>
                 <v-tabs-item name="2">Tab 2</v-tabs-item>
@@ -27,6 +27,7 @@
     import TabsHead from '../../../src/tabs-head'
     import TabsItem from '../../../src/tabs-item'
     import TabsPane from '../../../src/tabs-pane'
+    import Button from  '../../../src/button'
 
     export default {
         data() {
@@ -40,7 +41,7 @@
         <v-tabs :selected.sync="selectedTab" >
             <v-tabs-head>
                 <template slot="actions">
-                    <button>设置</button>
+                    <v-button>setting</v-button>
                 </template>
                 <v-tabs-item name="1">Tab 1</v-tabs-item>
                 <v-tabs-item name="2">Tab 2</v-tabs-item>
@@ -62,6 +63,7 @@
             'v-tabs-body': TabsBody,
             'v-tabs-item': TabsItem,
             'v-tabs-pane': TabsPane,
+            'v-button':Button
         }
     }
 </script>

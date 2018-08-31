@@ -31,9 +31,13 @@
                 loading2: true,
                 loading3: false,
                 content1: `    <v-button>默认按钮</v-button> `,
-                content2:`    <v-button :loading="loading1"
+                content2:`    data:{ loading1: false }
+
+        <v-button :loading="loading1"
         @click="loading1 = !loading1">按钮</v-button>`,
-                content3:`    <v-button  icon="shezhi" :loading="loading2"
+                content3:`    data:{ loading2: true, loading3: false }
+
+        <v-button  icon="shezhi" :loading="loading2"
         @click="loading2 = !loading2">按钮</v-button>
 
         <v-button  icon="shezhi" :loading="loading3" icon-position="right"
