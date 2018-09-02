@@ -1,7 +1,7 @@
 module.exports = {
     base: '/vue-wheel/',
-    title: '轱辘UI',
-    description: '轱辘UI轱辘UI',
+    title: '哪吒UI',
+    description: '哪吒UI',
     themeConfig: {
         nav:[
             {text: '主页', link: '/'},

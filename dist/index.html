@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue wheel</title>
+    <style>
+        * {margin: 0; padding: 0;box-sizing: border-box;}
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+        #app {
+            margin: 20px;
+        }
+        body {
+            font-size: var(--font-size);
+        }
+    </style>
+<link rel="stylesheet" href="/app.30898cc1.css"></head>
+<body>
+    <div id="app">
+        <v-button :loading="loading1" @click="loading1 = !loading1">
+            按钮
+        </v-button>
+        <v-button icon="shezhi" :loading="loading2" @click="loading2 = !loading2">
+            按钮
+        </v-button>
+        <v-button icon="shezhi" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+            按钮
+        </v-button>
+        <v-button-group>
+            <v-button icon="left">上一页</v-button>
+            <v-button icon="right" icon-position="right">下一页</v-button>
+        </v-button-group>
+
+        <div style="margin: 20px 0px">
+            <v-input value="disabled" disabled=""></v-input>
+            <v-input value="Hello"></v-input>
+            <v-input value="readonly" readonly=""></v-input>
+        </div>
+        <div style="margin: 20px 0px">
+            <v-input value="12" @change="inputChange"></v-input>
+            <v-input value="你" error="不能少于两个字"></v-input>
+        </div>
+        <div style="margin: 20px 0px;">
+            <v-input v-model="message"></v-input>
+            <p>{{message}}</p>
+            <button @click="message+=1">+1</button>
+        </div>
+        
+     <!--   <v-row gutter="20">
+            <v-col>1</v-col>
+            <v-col>2</v-col>
+        </v-row>
+       <v-row gutter="20">
+            <v-col>1</v-col>
+            <v-col>2</v-col>
+            <v-col>3</v-col>
+        </v-row>
+         <v-row gutter="20">
+              <v-col>1</v-col>
+              <v-col>2</v-col>
+              <v-col>3</v-col>
+              <v-col>4</v-col>
+          </v-row>
+         <v-row gutter="20">
+              <v-col :span="2" >1</v-col>
+              <v-col :span="20" offset="2">11</v-col>
+          </v-row>
+         <v-row gutter="20">
+                <v-col :span="2">1</v-col>
+                <v-col :span="22">11</v-col>
+         </v-row>-->
+
+        <div>
+            <v-popover>
+                <template slot="content">
+                    <div>popover 内容</div>
+                </template>
+                <button>点我</button>
+            </v-popover>
+        </div>
+
+
+        <v-tabs :selected.sync="selectedTab">
+            <v-tabs-head>
+                <template slot="actions">
+                    <button>设置</button>
+                </template>
+                <v-tabs-item name="fashion">
+                    <v-icon name="shezhi"></v-icon>时尚</v-tabs-item>
+                <v-tabs-item name="finance">财经</v-tabs-item>
+                <v-tabs-item name="sports">体育</v-tabs-item>
+                <v-tabs-item name="disabled" disabled="">禁用</v-tabs-item>
+            </v-tabs-head>
+            <v-tabs-body>
+                <v-tabs-pane name="fashion">时尚时尚资讯</v-tabs-pane>
+                <v-tabs-pane name="finance">财经财经早知道</v-tabs-pane>
+                <v-tabs-pane name="sports">体育竞技内容</v-tabs-pane>
+            </v-tabs-body>
+        </v-tabs>
+
+
+
+
+
+    </div>
+    <script src="/app.30898cc1.js"></script>
+    <script src="//at.alicdn.com/t/font_812789_2rgj0p3b1pf.js"></script>
+</body>
+</html>
